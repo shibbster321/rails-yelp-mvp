@@ -1,0 +1,4 @@
+<h1>Home Page</h1>
+<% @restaurants.each do |item| %>
+<p> <%= item.id %>. <%= item.name %> - <%= item.category %> </p>
+<% end %>
