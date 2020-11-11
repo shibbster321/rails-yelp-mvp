@@ -1,0 +1,16 @@
+<h1>individual restaurant</h1>
+
+<h4> (<%= @restaurant.id %>)Name: <%= @restaurant.name %> </h4>
+<p>Type: <%= @restaurant.category %> </p>
+<p>Address: <%= @restaurant.address %> </p>
+<p>Phone:<%= @restaurant.phone_number %> </p>
+
+<h5 class='border p-2'>Reviews:</h5>
+<% @reviews.each do |item| %>
+  <p class='pl-2'> <%=item.content%> - <%=item.rating%>stars</p>
+<% end %>
+
+<%= link_to 'Back to Restaurants', root_path, class: "badge border rounded bg-white" %>
+<%= link_to 'Leave a review', new_restaurant_review_path(@restaurant), class: "badge border rounded bg-success text-white" %>
+
+
